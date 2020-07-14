@@ -1,0 +1,9 @@
+No BackEnd: NodeJs e Express;
+No FrontEnd: HTML CSS JavaScript e Bootstrap;
+Git para versinamento de arquivos;
+Sistema operacional, Linux;
+
+É necessario ter o NodeJs intalado para rodar a API.
+
+use, node index.js no terminal.
+apos isso, abra o index.html com algum navegador.
