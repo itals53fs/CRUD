@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <div id="cabecalho" class="page-header">
+        <h1 id="titulo">Desafio</h1>
+        <p>itals</p>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <h2>Incluir</h2>
+            <form data-js="submit">
+                <!--formulario para submissao dos produtos-->
+                <ul>
+                    <!--estrutura de lista não ordenada-->
+                    <li>
+                        <input type="text" data-js="codigo" placeholder="nome" class="form-control">
+                        <!--entrada, data-js é o meu objeto de indentificação-->
+                    </li>
+                    <li>
+                        <input type="number" step="any" data-js="valor" placeholder="valor" class="form-control">
+                    </li>
+                    <li>
+                        <button type="submit" class="btn btn-primary">Incluir</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+
+        <div class="col-sm-3">
+            <form data-js="alterar">
+                <ul>
+                    <li>
+                        <h2>alterar</h2>
+                    </li>
+                    <li><input type="text" data-js="id" placeholder="codigo" class="form-control"></li>
+                    <li><input type="number" step="any" data-js="newValue" placeholder="Novo valor" class="form-control"></li>
+                    <li><button type="submit" class="btn btn-success">alterar</button></li>
+                </ul>
+            </form>
+        </div>
+
+        <div class="col-sm-2">
+            <form data-js="excluir">
+                <ul>
+                    <li>
+                        <h2>Excluir</h2>
+                    </li>
+                    <li><input type="text" data-js="excluir-id" placeholder="código" class="form-control"></li>
+                    <li><button type="submit" class="btn btn-danger">Excluir</button></li>
+                </ul>
+            </form>
+        </div>
+
+
+
+        <div class="col-sm-4">
+            
+                <ul>
+                    <li class="page-header">
+                        <h2>Listar</h2>
+                    </li>
+                    <li><button type="submit" data-js="listar" class="btn btn-warning">Listar</button></li>
+                </ul>
+
+
+            <table class="table table-striped border table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <td>Nome</td>
+                        <td>codigo</td>
+                        <td>Valor</td>
+                    </tr>
+                </thead>
+                <tbody data-js="table-Info" class="success">
+
+                </tbody>
+        </div>
+    </div>
+    <script src="front.js"></script>
+</body>
+
+</html>
