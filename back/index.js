@@ -1,11 +1,10 @@
 'use strict';
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-let fs = require('fs');
+const express = require('express'); //frameWork do node
+const cors = require('cors'); // quebar o problema de segurança
+const bodyParser = require('body-parser'); // parciar os dados do corpo da requisição
 const app = express();
 
-let produto = {
+let produto = { // registo dos produtos
     infor: []
 };
 
@@ -14,13 +13,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors());
 
 
-app.get('/', function (req, resp) {
+app.get('/', function (req, resp) { // raiz teste do sevidor
     resp.send('<h1>ola</h1>');
 })
 
 app.get('/produto', function (req, resp) {
         //salvarEmDisco()
-        return resp.json(produto);
+        return resp.json(produto); // resposta para o frnot
         
 })
 
@@ -39,8 +38,7 @@ app.post('/enviarProduto', function(req, resp){
 
         )
         
-    }
-    //salvarEmDisco()
+    } // se o arqivo nao exite é feito o registro
 })
 app.post('/alterarProduto', function(req, resp){
     let id = req.body.id;
@@ -52,7 +50,7 @@ app.post('/alterarProduto', function(req, resp){
     })
     
 
-})
+}) // altera o produto
 
 app.post('/excluirProduto', function(req, resp){
     let id = req.body.id;
@@ -64,12 +62,7 @@ app.post('/excluirProduto', function(req, resp){
     })
 
 
-})
-
-/*const salvarEmDisco = ()=>{
-    fs.writeFile('produto.json', JSON.stringify(produto, null, 2))
-
-}*/
+}) // exclui
 
 
-app.listen(3000);
+app.listen(3000); // porta
