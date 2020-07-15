@@ -5,5 +5,12 @@ Sistema operacional, Linux;
 
 É necessario ter o NodeJs intalado para rodar a API.
 
-use, node index.js no terminal.
-apos isso, abra o index.html com algum navegador.
+execute, node index.js no terminal.
+exemplo: cd Desktop/CRUD1/back
+            ~Desktop/CRUD1/back~ node index.js ou nodemon index.js se tiver intalado o nodemom
+
+
+apos isso, abra o index.html com algum navegador. OU use algum outro servidor como o LiveServer.
+Para usar o livesever basta baixar o plugin no vscode. Assim, abra a pasta CRUD1, com o index.html aberto no vscode use F1, open Live Server.
+
+
