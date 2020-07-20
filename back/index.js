@@ -27,11 +27,13 @@ app.post('/enviarProduto', function(req, resp){
     let nome = req.body.nome;
     let valor = req.body.valor;
     let boll = true;
+
     produto.infor.forEach(e=>{
         if(e.nome === nome){
         boll = false;
         }
     })
+
     if(boll){
         produto.infor.push(
             {id :  nome.slice(0,1) + produto.infor.length,  nome:nome, valor:valor}
@@ -40,6 +42,7 @@ app.post('/enviarProduto', function(req, resp){
         
     } // se o arqivo nao exite é feito o registro
 })
+
 app.post('/alterarProduto', function(req, resp){
     let id = req.body.id;
     let valor = req.body.valor;
@@ -57,10 +60,10 @@ app.post('/excluirProduto', function(req, resp){
     produto.infor.forEach((item, index)=>{
         if(item.id == id){
              produto.infor.splice(index, 1);
-            
+            //return resp.json('Excluido com sucesso!')
         }
     })
-
+    //return resp.json('Produto não existe!')
 
 }) // exclui
 

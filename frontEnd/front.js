@@ -35,7 +35,6 @@
                 post.open('POST', 'http://localhost:3000/excluirProduto')
                 post.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 post.send('id=' + $id.value);
-
             },
 
             alterar: function alterar(event){ // rota para alterar
@@ -75,8 +74,6 @@
                    // this faz referencia a variavel ajax.
                     let $tablecar = document.querySelector('[data-js="table-Info"]');
                     let fragment = document.createDocumentFragment(); // criando um fragmento
-                    
-                    //sapp().clearTable($tablecar);
             
                     data.infor.forEach(element => { // percorendo todos elementos de data.infor, sendo data um obj que contem um array
 
@@ -102,24 +99,6 @@
                 // tabela de resposta esta montada
 
             },
-
-            /*clearTable: function clearTable(element){
-                
-               let filhos =  element.childElementCount
-               console.log(filhos)
-               console.log(element.childElementCount)
-              
-               /*for(let i = 0; i <= filhos; i++  ){
-                   element.removeChild(element.childNodes[i])
-                   console.log(i)
-               }*/
-                //$table.removeChild($table.childNodes)
-
-                /*Array.prototype.forEach.call(element.childNodes, function(item, index){
-                    element.removeChild(item)
-                })
-            
-            },*/
         }
     }
     app().init();
