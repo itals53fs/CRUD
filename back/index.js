@@ -3,12 +3,10 @@ const express = require('express'); //frameWork do node
 const cors = require('cors'); // quebar o problema de segurança
 const bodyParser = require('body-parser'); // parciar os dados do corpo da requisição
 const app = express();
-
+const fs = require('fs');
 let produto = { // registo dos produtos
     infor: []
 };
-
-
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors());
 
@@ -18,7 +16,8 @@ app.get('/', function (req, resp) { // raiz teste do sevidor
 })
 
 app.get('/produto', function (req, resp) {
-        //salvarEmDisco()
+       
+       // console.log(produto)
         return resp.json(produto); // resposta para o frnot
         
 })
@@ -39,7 +38,7 @@ app.post('/enviarProduto', function(req, resp){
             {id :  nome.slice(0,1) + produto.infor.length,  nome:nome, valor:valor}
 
         )
-        
+       escreverEmDisco()
     } // se o arqivo nao exite é feito o registro
 })
 
@@ -66,6 +65,13 @@ app.post('/excluirProduto', function(req, resp){
     //return resp.json('Produto não existe!')
 
 }) // exclui
+function escreverEmDisco(){
+    fs.writeFile('produtosS.json', JSON.stringify(produto, null, 2))
+}
 
-
+function ler(){
+   let produto1 = fs.readFileSync('produtosS.json')
+   return JSON.parse(produto1)
+}
+//ler()
 app.listen(3000); // porta
