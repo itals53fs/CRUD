@@ -74,7 +74,7 @@
                    // this faz referencia a variavel ajax.
                     let $tablecar = document.querySelector('[data-js="table-Info"]');
                     let fragment = document.createDocumentFragment(); // criando um fragmento
-            
+                    
                     data.infor.forEach(element => { // percorendo todos elementos de data.infor, sendo data um obj que contem um array
 
                         let tr = document.createElement('tr') // criando uma coluna

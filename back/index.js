@@ -38,7 +38,7 @@ app.post('/enviarProduto', function(req, resp){
             {id :  nome.slice(0,1) + produto.infor.length,  nome:nome, valor:valor}
 
         )
-       escreverEmDisco()
+       //escreverEmDisco()
     } // se o arqivo nao exite é feito o registro
 })
 
