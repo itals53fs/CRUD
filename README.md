@@ -12,8 +12,8 @@
 </br>
 <p>Esse projeto é um estudo de Front End e Back End usando as seguintes tecnologias:</p>
 <span>
- - ✔️ NodeJs </br>
- -  ✔️ Expresss </br>
+- ✔️ NodeJs </br>
+-  ✔️ Expresss </br>
 - ✔️ Javascript </br>
 - ✔️ Ajax </br>
 - ✔️ HTML </br>
