@@ -24,4 +24,13 @@
  
 <div>
 <h1>ℹ️ Como usar</h1>
-<div class="highlight highlight-source-shell"><pre>
+<h2>É necessario ter o node e npm enstalado na maquina<h2>
+<h3>Na pasta back</h3>
+<i>npm install</i> <span> instala as dependencias do package.json </span> <br>
+<i>node index.js</i> <span> sobe o servidor </span> 
+
+<h3>Na pasta frontEnd</h3>
+<i>abra o aquivo index.html em um navegador ou suba com o liveServer extensão do vsCode</i>
+
+
+
