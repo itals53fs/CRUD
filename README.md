@@ -24,7 +24,7 @@
  
 <div>
 <h1>ℹ️ Como usar</h1>
-<h2>É necessario ter o node e npm enstalado na maquina<h2>
+<h2>É necessario ter o node e npm instalado em sua maquina<h2>
 <h3>Na pasta back</h3>
 <i>npm install</i> <span> instala as dependencias do package.json </span> <br>
 <i>node index.js</i> <span> sobe o servidor </span> 
