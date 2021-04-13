@@ -3,7 +3,7 @@
      CRUD</h1> 
   
   <p>Print Aplicação</p>
- <img src="http://italsblog.epizy.com/public/img/crud11.png"/>
+ <img src="./assets/cap.png" style="max-with:500px"/>
 </div>
 
 <div>

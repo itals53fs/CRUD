@@ -73,6 +73,7 @@
                     let data = JSON.parse(this.responseText); // data recebe um objet já convertido de Json para JS
                    // this faz referencia a variavel ajax.
                     let $tablecar = document.querySelector('[data-js="table-Info"]');
+                    $tablecar.innerHTML = ''
                     let fragment = document.createDocumentFragment(); // criando um fragmento
                     
                     data.infor.forEach(element => { // percorendo todos elementos de data.infor, sendo data um obj que contem um array
@@ -83,7 +84,7 @@
                         let id = document.createElement('td');
 
                         codigo.textContent = element.nome; // add os elementos de data.infor
-                        valor.textContent = element.valor;
+                        valor.textContent = element.valors;
                         id.textContent = element.id
 
 
