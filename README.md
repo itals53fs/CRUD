@@ -10,7 +10,7 @@
 
 <h1>🚀 Tecnologias</h1>
 </br>
-<p>Esse projeto é um estudo de Front End usando as seguintes tecnologias:</p>
+<p>Esse projeto é um estudo de Front End e Back End usando as seguintes tecnologias:</p>
 <span>
  - ✔️ NodeJs </br>
  -  ✔️ Expresss </br>
